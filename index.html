@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="assets/image/luxometro.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>App Iluminación</title>
+</head>
+<body>
+  <main>
+    <section class="mainContent">
+      <h1>Puntos de medición y cálculos de iluminación</h1>
+      <h3>Sector: <span class="sector" contenteditable="true">Nombre del sector</span></h3>
+      <p>Largo: <input type="number" min="0" class="largo inputs" placeholder="Largo" > m</p>
+      <p>Ancho: <input type="number" min="0" class="ancho inputs" placeholder="Ancho" > m</p>
+      <p>Altura de luminarias: <input type="number" min="0" class="altoLuces inputs" placeholder="AltoLuces" > m</p>
+      <h4>Metodo de grilla</h4>
+      <div class="container">
+      </div>
+      <p style="text-align: center;"><strong>Valores obtenidos</strong></p>
+      <table>
+        <tr>
+          <th>Media</th>
+          <th>Minima</th>
+          <th>E media / 2</th>
+        </tr>
+        <tr>
+          <td><span class="media">0</span> Lux</td>
+          <td><span class="minima">0</span> Lux</td>
+          <td><span class="mediasobredos">0</span> Lux</td>
+        </tr>
+      </table>
+      <div style="height: 10px;"></div>
+      <div class="image-preview-container">
+        <div class="preview">
+          <img id="preview-selected-image" alt="Firma del responsable"/>
+        </div>
+          <label for="file-upload">FIRMA</label>
+          <input type="file" id="file-upload" accept="image/*" />
+      </div>
+    </section>
+    <div class="botones">
+      <button id="calcular">Calcular</button>
+      <button id="generatePDF">Generar PDF</button>
+    </div>
+  </main>
+</body>
+<script src="assets/script/getIMG.js"></script>
+
+</html>
+

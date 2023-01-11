@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;;
+}
+body{
+  background-image: url("/assets/image/luxometro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section{
+  width: 600px;
+  background-color: rgb(255, 255, 255);
+}
+h1,h3,h4{
+  text-align: center;
+}
+section>p{
+  margin: 1rem 0;
+}
+
+button{
+  background-color: #7ed7d5; /* Green */
+  color: rgb(0, 0, 0);
+  padding: 8px 20px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #60a8a6;
+}
+
+.media,.minima,.mediasobredos{
+  padding-left: 1rem;
+}
+
+.largo,.ancho,.altoLuces {
+  border: none;
+  border-bottom: 2px solid #60a8a6;
+  width: 80px;
+}
+
+.item{
+  text-align: center;
+}
+
+.image-preview-container {
+  width: 15%;
+  margin: 0 auto;
+}
+
+.image-preview-container img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.image-preview-container input {
+  display: none;
+}
+
+.image-preview-container label {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #60a8a6;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+th,td {
+  border: 1px solid #60a8a6;
+  padding: .75rem;
+  text-align: center;
+}
+th {
+  background: #60a8a6;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  section{
+    width: 100%;
+  }
+}
