@@ -60,7 +60,6 @@ const generateGrid = cantidadPuntos =>{
 const getGrid = ()=>{
     const calcular = document.getElementById('calcular')
     const item = document.querySelectorAll('.item')
-    console.log(item)
     let arr=[];
     
     calcular.addEventListener('click', (e)=>{
