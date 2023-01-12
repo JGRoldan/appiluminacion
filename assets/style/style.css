@@ -96,6 +96,7 @@ th {
 @media screen and (max-width: 600px) {
   section{
     width: 100%;
+    overflow-y:scroll;
   }
 }
 
