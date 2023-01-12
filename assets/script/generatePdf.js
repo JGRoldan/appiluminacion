@@ -11,6 +11,7 @@ button.addEventListener("click", e=> {
     }, 1500);
     
     setTimeout(() => {
+        document.getElementById('body').style.background = 'none'
         window.print()
         window.location.reload()
     },1800);
