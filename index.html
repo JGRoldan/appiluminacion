@@ -3,50 +3,67 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="https://www.sincable.mx/wp-content/uploads/2020/10/ktV-luxometro-0-102772899_m.jpg">
     <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="assets/image/luxometro.jpg">
-  <title>App Iluminación</title>
-</head>
-<body>
-  <main>
-    <section class="mainContent">
-      <h1>Puntos de medición y cálculos de iluminación</h1>
-      <h3>Sector: <span class="sector" contenteditable="true">Nombre del sector</span></h3>
-      <p>Largo: <input type="number" min="0" class="largo inputs" placeholder="Largo" > m</p>
-      <p>Ancho: <input type="number" min="0" class="ancho inputs" placeholder="Ancho" > m</p>
-      <p>Altura de luminarias: <input type="number" min="0" class="altoLuces inputs" placeholder="AltoLuces" > m</p>
-      <h4>Metodo de grilla</h4>
-      <div class="container">
-      </div>
-      <p style="text-align: center;"><strong>Valores obtenidos</strong></p>
-      <table>
-        <tr>
-          <th>Media</th>
-          <th>Minima</th>
-          <th>E media / 2</th>
-        </tr>
-        <tr>
-          <td><span class="media">0</span> Lux</td>
-          <td><span class="minima">0</span> Lux</td>
-          <td><span class="mediasobredos">0</span> Lux</td>
-        </tr>
-      </table>
-      <div style="height: 10px;"></div>
-      <div class="image-preview-container">
-        <div class="preview">
-          <img id="preview-selected-image" alt="Firma del responsable"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <title>App Iluminación</title>
+    <meta name="title" content="App iluminación">
+    <meta name="description" content="Calculadora de puntos de iluminación segun metodo grilla (Res. SRT 84/12) y generador de pdf.">
+    <meta name="keywords" content="Aplicacion iluminacion, iluminacion, protoclo de iluminacion argentina, srt iluminacion">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="JGRdeveloper">
+  </head>
+  <body id="body">
+    <main>
+      <section class="mainContent">
+        <h1>Puntos de medición y cálculos de iluminación</h1>
+        <h3>Sector: <span class="sector" contenteditable="true">Nombre del sector</span></h3>
+        <p>Largo: <input type="number" min="0" class="largo inputs" placeholder="Largo" > m</p>
+        <p>Ancho: <input type="number" min="0" class="ancho inputs" placeholder="Ancho" > m</p>
+        <p>Altura de luminarias: <input type="number" min="0" class="altoLuces inputs" placeholder="AltoLuces" > m</p>
+        <h4>Metodo de grilla</h4>
+        <div class="container">
         </div>
-          <label for="file-upload">FIRMA</label>
-          <input type="file" id="file-upload" accept="image/*" />
+        <p style="text-align: center;"><strong>Valores obtenidos</strong></p>
+        <table>
+          <tr>
+            <th>Media</th>
+            <th>Minima</th>
+            <th>E media / 2</th>
+          </tr>
+          <tr>
+            <td><span class="media">0</span> Lux</td>
+            <td><span class="minima">0</span> Lux</td>
+            <td><span class="mediasobredos">0</span> Lux</td>
+          </tr>
+        </table>
+        <div style="height: 30px;"></div>
+        <div class="image-preview-container">
+          <div class="preview">
+            <img id="preview-selected-image" alt="Firma del responsable"/>
+          </div>
+            <label for="file-upload">FIRMA</label>
+            <input type="file" id="file-upload" accept="image/*" />
+        </div>
+      </section>
+      <div style="height: 10px;"></div>
+      <div class="botones">
+        <button id="calcular">Calcular <i class="fa fa-calculator"></i></button>
+        <button id="generatePDF">Generar PDF <i class="fa fa-print"></i></button>
       </div>
-    </section>
-    <div class="botones">
-      <button id="calcular">Calcular</button>
-      <button id="generatePDF">Generar PDF</button>
+    </main>
+    <div class="modal">
+      <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+      </div>
+      <p>GENERANDO PDF...</p>
     </div>
-  </main>
-</body>
-<script src="assets/script/getIMG.js"></script>
-
+  </body>
+  <script src="assets/script/script.js"></script>
+  <script src="assets/script/generatePdf.js"></script>
+  <script src="assets/script/loadImg.js"></script>
 </html>
-
