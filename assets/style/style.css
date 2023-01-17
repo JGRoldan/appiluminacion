@@ -224,14 +224,21 @@ th {
     width: 100%;
     overflow-y: scroll;
   }
-/*   main{
+  main{
   height: 100%;
-  } */
+  }
 }
 @media print {
   .mainContent{
     width: 100%;
     margin: 0 auto;
+  }
+    th {
+    background: #60a8a6;
+    color: #fff;
+  }
+  .botones{
+    display: none;
   }
 }  
 
